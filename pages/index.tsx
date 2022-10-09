@@ -1,14 +1,11 @@
 import Head from 'next/head'
 import Footer from '../app/components/common/footer/Footer'
+import Layout from '../app/components/common/Layout'
 
 import styles from '../assets/styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      
-
-      <Footer/>
-    </div>
+    <Layout>Home page</Layout>
   )
 }

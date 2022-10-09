@@ -2,7 +2,15 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import styles from './Footer.module.scss'
 
-const navItems = [
+type NavItem = {
+  icon: string
+  link: string
+
+}
+
+
+
+const navItems:NavItem[] = [
   {
     icon: 'home',
     link: '/'
@@ -13,7 +21,7 @@ const navItems = [
   },
   {
     icon: 'place',
-    link: '/place'
+    link: '/place/kyoto'
   },
   {
     icon: 'person_outline',
@@ -24,8 +32,7 @@ const navItems = [
 const Footer = () => {
 const {push, asPath, pathname} = useRouter()
 
-console.log(asPath, pathname)
-  
+
   
   return (
     <footer className={styles.footer}>
